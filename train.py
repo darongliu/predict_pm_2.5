@@ -42,7 +42,7 @@ def main():
 	repeat = 100 #TODO
 
 	# here you need to update (w1, w2, w3, w4, w5, b) according to their gradient
-	# step 1. init parameters(w1, w2, w3, w4, w5, b) 
+	# step 1. init parameters(w1, w2, w3, w4, w5, b)
 	parameters = np.zeros(hour_prior+1)
 	for i in range(repeat):
 		# step 2. calculate loss
@@ -50,7 +50,7 @@ def main():
 		loss = y_pred - y
 		gradient = np.dot(np.transpose(x),loss)
 		parameters = parameters - l_rate * gradient
-		
+
 		# print cost every iteration
 		cost = np.sum(loss**2) / len(x)
 		cost = np.sqrt(cost)
